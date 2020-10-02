@@ -4,8 +4,12 @@
       <div class="container">
         <a class="navbar-brand font-weight-bold">upspot</a>
         <form class="d-flex">
-          <button class="btn btn-light" type="submit">Iniciar sessão</button>
-          <button class="btn btn-light" type="submit">Criar conta</button>
+          <nuxt-link class="btn btn-light" type="submit" to="/login">
+            Iniciar sessão
+          </nuxt-link>
+          <nuxt-link class="btn btn-light" type="submit" to="/register">
+            Criar conta
+          </nuxt-link>
         </form>
       </div>
     </nav>

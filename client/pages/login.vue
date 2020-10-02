@@ -17,7 +17,10 @@
             />
             <button class="btn btn-primary mt-4">Iniciar</button>
             <hr class="dropdown-divider mt-3" />
-            <button class="btn btn-dark mt-2">Criar</button>
+            <nuxt-link to="/register" class="btn btn-dark mt-2"
+              >Criar</nuxt-link
+            >
+            <nuxt-link to="/" class="btn btn-light mt-3">Voltar</nuxt-link>
           </div>
         </div>
       </div>
