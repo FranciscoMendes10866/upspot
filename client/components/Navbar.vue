@@ -4,8 +4,8 @@
       <div class="container">
         <a class="navbar-brand font-weight-bold">upspot</a>
         <form class="d-flex">
-          <button class="btn btn-light" type="submit">Sign In</button>
-          <button class="btn btn-light" type="submit">Sign Up</button>
+          <button class="btn btn-light" type="submit">Iniciar sessão</button>
+          <button class="btn btn-light" type="submit">Criar conta</button>
         </form>
       </div>
     </nav>
