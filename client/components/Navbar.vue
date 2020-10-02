@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-light bg-light fixed-top bg-transparent">
+    <nav class="navbar navbar-light bg-light bg-transparent">
       <div class="container">
         <a class="navbar-brand font-weight-bold">upspot</a>
         <form class="d-flex">

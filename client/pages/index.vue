@@ -5,7 +5,7 @@
       <Navbar />
     </section>
     <!-- Hero Landing -->
-    <section class="mt-5">
+    <section class="mt-2">
       <div class="container">
         <div class="row py-5">
           <div class="col-sm">
@@ -20,7 +20,7 @@
       </div>
     </section>
     <!-- Search Component -->
-    <section class="mt-4">
+    <section class="mt-4 py-4">
       <div class="container d-flex justify-content-center">
         <div class="row">
           <div class="col">
@@ -28,6 +28,14 @@
               <Search />
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="mt-4 py-5">
+      <div class="container">
+        <div class="d-flex justify-content-between">
+          <h4 class="font-weight-bold">Eventos perto de Coimbra.</h4>
+          <button class="btn btn-link">Ver todos</button>
         </div>
       </div>
     </section>
