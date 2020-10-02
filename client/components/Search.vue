@@ -6,7 +6,7 @@
           type="text"
           class="form-control"
           id="exampleFormControlInput1"
-          style="width: 300px"
+          style="width: 400px"
           placeholder="Encontre o seu próximo evento."
         />
       </div>
