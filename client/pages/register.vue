@@ -57,7 +57,7 @@ export default Vue.extend({})
   color: white;
 }
 .btn-bg-blue-darken {
-  background: #0F0140;
+  background: #0f0140;
   color: white;
 }
 </style>
