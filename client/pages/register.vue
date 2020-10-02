@@ -4,8 +4,7 @@
       <div class="row">
         <div class="col">
           <div class="card px-4 py-4">
-            <h1 class="text-center mb-4 text-muted">Criar conta</h1>
-            <input class="form-control" type="text" placeholder="Nome" />
+            <h1 class="text-center text-muted">Criar conta</h1>
             <input
               class="mt-3 form-control"
               type="email"
