@@ -59,6 +59,10 @@
         </div>
       </div>
     </section>
+    <!-- Footer section -->
+    <section>
+      <Footer />
+    </section>
   </div>
 </template>
 
@@ -66,11 +70,13 @@
 import Vue from 'vue'
 import Navbar from '../components/Navbar.vue'
 import Search from '../components/Search.vue'
+import Footer from '../components/Footer.vue'
 
 export default Vue.extend({
   components: {
     Navbar,
     Search,
+    Footer,
   },
   data: () => ({
     events: [
