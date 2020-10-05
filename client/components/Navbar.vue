@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-light bg-light bg-transparent">
       <div class="container">
-        <a class="navbar-brand font-weight-bold">upspot</a>
+        <a class="navbar-brand font-weight-bold">Lamy</a>
         <form class="d-flex">
           <nuxt-link class="btn bg-transparent" to="/login">
             Iniciar sessão

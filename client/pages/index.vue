@@ -5,22 +5,27 @@
       <Navbar />
     </section>
     <!-- Hero Landing -->
-    <section class="mt-2">
+    <section class="py-5 mt-5">
       <div class="container">
         <div class="row py-5">
-          <div class="col-sm">
-            <h1 class="text-left display-1 font-weight-bold">
+          <div class="col-sm text-center">
+            <h1 class="text-left display-4 font-weight-bold text-center">
               Descubra eventos para todas as coisas que você ama.
             </h1>
-            <button type="button" class="btn btn-outline-primary btn-lg mt-4">
-              Começar.
-            </button>
+            <div class="mt-5">
+              <button type="button" class="btn btn-primary btn-lg mt-4">
+                Começar.
+              </button>
+              <button type="button" class="btn btn-outline-primary btn-lg mt-4">
+                Saber mais.
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <!-- Search Component -->
-    <section class="mt-4 py-4">
+    <section class="py-3">
       <div class="container d-flex justify-content-center">
         <div class="row">
           <div class="col">
@@ -31,7 +36,7 @@
         </div>
       </div>
     </section>
-    <section class="mt-4 py-5">
+    <section class="mt-5 py-5">
       <div class="container">
         <div class="d-flex justify-content-start">
           <h4 class="font-weight-bold">
