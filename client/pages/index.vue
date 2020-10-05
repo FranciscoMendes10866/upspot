@@ -29,24 +29,18 @@
       <div class="container d-flex justify-content-center">
         <div class="row">
           <div class="col">
-            <div class="card border-light px-4 py-4 shadow">
+            <div class="card border-light px-4 py-4 shadow mb-5">
               <Search />
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="mt-5 py-5">
+    <section class="py-5 bg-light">
       <div class="container">
-        <div class="d-flex justify-content-start">
-          <h4 class="font-weight-bold">
-            Eventos perto de <span class="badge bg-primary">Coimbra.</span>
-          </h4>
-        </div>
-      </div>
-    </section>
-    <section class="py-3">
-      <div class="container">
+        <h4 class="font-weight-bold py-5">
+          Eventos perto de <span class="badge bg-primary">Coimbra.</span>
+        </h4>
         <div class="d-flex flex-wrap">
           <div
             v-for="event in events"
