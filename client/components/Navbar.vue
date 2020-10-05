@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-light bg-light bg-transparent">
+    <nav class="navbar navbar-light bg-white fixed-top">
       <div class="container">
         <a class="navbar-brand font-weight-bold">Lamy</a>
         <form class="d-flex">
