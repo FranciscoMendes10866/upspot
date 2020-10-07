@@ -5,10 +5,10 @@
         <a class="navbar-brand font-weight-bold">Lamy</a>
         <form class="d-flex">
           <nuxt-link class="btn bg-transparent" to="/login">
-            Iniciar sessão
+            Sign In
           </nuxt-link>
           <nuxt-link class="btn bg-transparent" to="/register">
-            Criar conta
+            Sign Up
           </nuxt-link>
         </form>
       </div>

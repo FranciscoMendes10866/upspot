@@ -4,23 +4,23 @@
       <div class="row">
         <div class="col">
           <div class="card px-4 py-4 shadow">
-            <h3 class="text-center text-muted">Criar conta</h3>
+            <h3 class="text-center text-muted">Create account</h3>
             <input
               class="mt-3 form-control"
               type="email"
-              placeholder="Insira o seu email"
+              placeholder="Enter your email"
             />
             <input
               class="mt-3 form-control"
               type="text"
-              placeholder="Insira a sua palavra passe"
+              placeholder="Enter your password"
             />
-            <button class="btn btn-bg-blue mt-4">Criar</button>
+            <button class="btn btn-bg-blue mt-4">Sign Up</button>
             <hr class="dropdown-divider mt-3" />
             <nuxt-link to="/login" class="btn btn-bg-blue-darken mt-2"
-              >Iniciar</nuxt-link
+              >Sign In</nuxt-link
             >
-            <nuxt-link to="/" class="btn btn-light mt-3">Voltar</nuxt-link>
+            <nuxt-link to="/" class="btn btn-light mt-3">Go back</nuxt-link>
           </div>
         </div>
       </div>

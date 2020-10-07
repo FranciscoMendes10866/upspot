@@ -10,14 +10,14 @@
         <div class="row py-5">
           <div class="col-sm text-center">
             <h1 class="text-left display-4 font-weight-bold text-center">
-              Descubra eventos para todas as coisas que você ama.
+              Discover events for all the things you love.
             </h1>
             <div class="mt-5">
               <button type="button" class="btn btn-primary btn-lg mt-4">
-                Começar.
+                Get Started.
               </button>
               <button type="button" class="btn btn-outline-primary btn-lg mt-4">
-                Saber mais.
+                Know more.
               </button>
             </div>
           </div>
@@ -39,7 +39,7 @@
     <section class="py-5 bg-light">
       <div class="container">
         <h4 class="font-weight-bold py-5">
-          Eventos perto de <span class="badge bg-primary">Coimbra.</span>
+          Events near <span class="badge bg-primary">Zurich.</span>
         </h4>
         <div class="d-flex flex-wrap">
           <div
@@ -52,7 +52,7 @@
               <h5 class="card-title">{{ event.title }}</h5>
               <small class="card-title">{{ event.date }}</small>
               <nuxt-link to="/" class="btn btn-light mt-3"
-                >Ver evento</nuxt-link
+                >View event</nuxt-link
               >
             </div>
           </div>

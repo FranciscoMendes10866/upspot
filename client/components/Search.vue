@@ -6,23 +6,20 @@
           type="text"
           class="form-control limit"
           id="exampleFormControlInput1"
-          placeholder="Encontre o seu próximo evento."
+          placeholder="Find your next event."
         />
       </div>
 
       <div class="col-12">
-        <label class="visually-hidden" for="inlineFormSelectPref"
-          >Preference</label
-        >
         <select class="form-select" id="inlineFormSelectPref">
-          <option selected>Coimbra</option>
-          <option value="1">Lisboa</option>
-          <option value="2">Porto</option>
+          <option selected>Zurich</option>
+          <option value="1">Luzern</option>
+          <option value="2">Glarus</option>
         </select>
       </div>
 
       <div class="col-12">
-        <button type="submit" class="btn btn-outline-primary">Procurar</button>
+        <button type="submit" class="btn btn-outline-primary">Search</button>
       </div>
     </form>
   </div>
