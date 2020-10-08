@@ -12,6 +12,9 @@
           <nuxt-link class="btn btn-sm bg-transparent" to="/register">
             Sign Up
           </nuxt-link>
+          <nuxt-link class="btn btn-sm bg-transparent" to="/panel">
+            Panel
+          </nuxt-link>
           <button class="btn btn-sm btn-primary">Sign Out</button>
         </form>
       </div>
