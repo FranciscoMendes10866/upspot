@@ -51,9 +51,24 @@
             <div class="card-body">
               <h5 class="card-title">{{ event.title }}</h5>
               <small class="card-title">{{ event.date }}</small>
-              <nuxt-link to="/" class="btn btn-light mt-3"
-                >View event</nuxt-link
+              <div
+                class="mt-4 d-flex justify-content-between align-items-center"
               >
+                <nuxt-link to="/" class="btn btn-outline-primary"
+                  >View event</nuxt-link
+                >
+                <button
+                  v-if="event.current != event.max"
+                  class="btn btn-light"
+                  disabled
+                >
+                  {{ event.current }} /
+                  <span class="font-weight-bold">{{ event.max }}</span>
+                </button>
+                <button v-else class="btn btn-light font-weight-bold" disabled>
+                  Full
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -87,6 +102,8 @@ export default Vue.extend({
         title: 'Agile Connect Day',
         date: 'Saturday, October 10, 2020',
         type: 'Evento online',
+        max: 35,
+        current: 12,
       },
       {
         id: 2,
@@ -95,6 +112,8 @@ export default Vue.extend({
         title: 'Agile Connect Day',
         date: 'Saturday, October 10, 2020',
         type: 'Evento online',
+        max: 50,
+        current: 4,
       },
       {
         id: 3,
@@ -103,6 +122,8 @@ export default Vue.extend({
         title: 'Agile Connect Day',
         date: 'Saturday, October 10, 2020',
         type: 'Evento online',
+        max: 12,
+        current: 12,
       },
       {
         id: 4,
@@ -111,6 +132,8 @@ export default Vue.extend({
         title: 'Agile Connect Day',
         date: 'Saturday, October 10, 2020',
         type: 'Evento online',
+        max: 40,
+        current: 27,
       },
       {
         id: 5,
@@ -119,6 +142,8 @@ export default Vue.extend({
         title: 'Agile Connect Day',
         date: 'Saturday, October 10, 2020',
         type: 'Evento online',
+        max: 200,
+        current: 44,
       },
     ],
   }),
