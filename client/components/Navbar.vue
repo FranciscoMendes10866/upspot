@@ -1,15 +1,18 @@
 <template>
   <div>
-    <nav class="navbar navbar-light bg-white fixed-top">
+    <nav class="navbar navbar-light bg-white">
       <div class="container">
-        <a class="navbar-brand font-weight-bold">Lamy</a>
+        <nuxt-link class="navbar-brand font-weight-bold" to="/">
+          Lamy
+        </nuxt-link>
         <form class="d-flex">
-          <nuxt-link class="btn bg-transparent" to="/login">
+          <nuxt-link class="btn btn-sm bg-transparent" to="/login">
             Sign In
           </nuxt-link>
-          <nuxt-link class="btn bg-transparent" to="/register">
+          <nuxt-link class="btn btn-sm bg-transparent" to="/register">
             Sign Up
           </nuxt-link>
+          <button class="btn btn-sm btn-primary">Sign Out</button>
         </form>
       </div>
     </nav>
