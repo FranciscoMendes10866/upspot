@@ -7,8 +7,8 @@
     <!-- Header section -->
     <section class="py-5 border-top border-bottom border-1">
       <div class="container">
-        <p class="h5 text-muted">{{ event.date }}</p>
-        <p class="h1 font-weight-bold">{{ event.title }}</p>
+        <p class="text-muted">{{ event.date }}</p>
+        <p class="h1 font-weight-bold mt-2 mb-2">{{ event.title }}</p>
         <small class="text-muted">Hosted by:</small>
         <a :href="event.hostURL" target="blank" class="link-primary dec"
           ><small>{{ event.hostName }}</small></a
@@ -105,5 +105,6 @@ export default Vue.extend({
 p {
   text-align: justify;
   text-justify: inter-word;
+  margin: 0;
 }
 </style>
