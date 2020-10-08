@@ -3,7 +3,7 @@
     <div class="container limit">
       <div class="row">
         <div class="col">
-          <div class="card px-4 py-4 shadow">
+          <div class="card border-0 px-4 py-4 shadow">
             <h3 class="text-center mb-4 text-muted">Welcome back!</h3>
             <input
               class="form-control"
