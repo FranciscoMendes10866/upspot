@@ -18,7 +18,7 @@
     <!-- Event info section -->
     <section class="bg-light py-5">
       <div class="container">
-        <div class="d-flex justify-content-evenly flex-wrap">
+        <div class="d-flex justify-content-around flex-wrap">
           <!-- Left -->
           <div class="mt-3">
             <div class="img-w">
@@ -44,9 +44,25 @@
           <!-- Right -->
           <div class="mt-3">
             <div class="card border-0 shadow w px-3 py-3">
-              <h1>Hi</h1>
-              <h1>Pois</h1>
-              <button class="btn btn-primary mt-2">Attend</button>
+              <span class="text-muted mb-2">{{ event.type }}</span>
+              <span>10:00 AM to 7:00 PM</span>
+              <button
+                v-if="event.attend === false"
+                class="btn btn-primary mt-3"
+              >
+                Attend
+              </button>
+              <button v-if="event.attend === true" class="btn btn-danger mt-3">
+                Not Attend
+              </button>
+              <a
+                v-if="event.attend === true"
+                :href="event.link"
+                target="blank"
+                class="btn btn-primary mt-2"
+              >
+                Visit
+              </a>
               <button class="btn btn-light mt-2">Go back</button>
             </div>
           </div>
@@ -82,6 +98,8 @@ export default Vue.extend({
       current: 12,
       hostName: 'Instituto Superior Miguel Torga',
       hostURL: 'https://www.ismt.pt',
+      attend: true,
+      link: 'https://discord.com/',
     },
   }),
 })

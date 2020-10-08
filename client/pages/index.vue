@@ -75,14 +75,4 @@ export default Vue.extend({
   -moz-box-shadow: 2px 2px 2px 2px #ccc; /* Firefox 3.5 - 3.6 */
   box-shadow: 2px 2px 2px 2px #ccc; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
-.w {
-  width: 18rem;
-}
-.bdg {
-  position: absolute;
-  padding: 5px;
-  top: 0;
-  margin-top: 10px;
-  margin-left: 10px;
-}
 </style>

@@ -91,3 +91,16 @@ export default Vue.extend({
   }),
 })
 </script>
+
+<style scoped>
+.w {
+  width: 18rem;
+}
+.bdg {
+  position: absolute;
+  padding: 5px;
+  top: 0;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+</style>
