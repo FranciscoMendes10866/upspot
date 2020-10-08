@@ -47,7 +47,9 @@
             :key="event.id"
             class="card border-light shadow w mb-4 ml-4"
           >
-            <span class="badge bg-white text-dark bdg">{{ event.type }}.</span>
+            <span class="badge bg-white text-dark shadow bdg"
+              >{{ event.type }}.</span
+            >
             <img :src="event.img" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">{{ event.title }}</h5>
