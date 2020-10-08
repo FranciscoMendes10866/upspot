@@ -63,7 +63,7 @@
               >
                 Visit
               </a>
-              <button class="btn btn-light mt-2">Go back</button>
+              <nuxt-link to="/" class="btn btn-light mt-2">Go back</nuxt-link>
             </div>
           </div>
         </div>
