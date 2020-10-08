@@ -46,17 +46,17 @@
             <div class="card border-0 shadow w px-3 py-3">
               <span class="text-muted mb-2">{{ event.type }}</span>
               <span>10:00 AM to 7:00 PM</span>
-              <button
-                v-if="event.attend === false"
-                class="btn btn-primary mt-3"
-              >
+              <button v-if="attend === null" class="btn btn-success mt-3">
+                Validate
+              </button>
+              <button v-if="attend === false" class="btn btn-primary mt-3">
                 Attend
               </button>
-              <button v-if="event.attend === true" class="btn btn-danger mt-3">
+              <button v-if="attend === true" class="btn btn-danger mt-3">
                 Not Attend
               </button>
               <a
-                v-if="event.attend === true"
+                v-if="attend === true"
                 :href="event.link"
                 target="blank"
                 class="btn btn-primary mt-2"
@@ -98,9 +98,9 @@ export default Vue.extend({
       current: 12,
       hostName: 'Instituto Superior Miguel Torga',
       hostURL: 'https://www.ismt.pt',
-      attend: true,
       link: 'https://discord.com/',
     },
+    attend: null,
   }),
 })
 </script>

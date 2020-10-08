@@ -5,7 +5,7 @@
       <Navbar class="fixed-top" />
     </section>
     <!-- Page content -->
-    <h1 class="mt-5 py-5 px-5">Panel</h1>
+    <h1 class="mt-5 py-5 px-5">My events</h1>
     <!-- Footer -->
     <section>
       <Footer />
