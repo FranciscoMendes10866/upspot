@@ -47,6 +47,7 @@
             :key="event.id"
             class="card border-light shadow w mb-4 ml-4"
           >
+            <span class="badge bg-white text-dark bdg">{{ event.type }}.</span>
             <img :src="event.img" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">{{ event.title }}</h5>
@@ -101,7 +102,7 @@ export default Vue.extend({
           'https://secure.meetupstatic.com/photos/event/4/3/e/2/highres_492797378.jpeg',
         title: 'Agile Connect Day',
         date: 'Saturday, October 10, 2020',
-        type: 'Evento online',
+        type: 'Online event',
         max: 35,
         current: 12,
       },
@@ -111,7 +112,7 @@ export default Vue.extend({
           'https://secure.meetupstatic.com/photos/event/4/3/e/2/highres_492797378.jpeg',
         title: 'Agile Connect Day',
         date: 'Saturday, October 10, 2020',
-        type: 'Evento online',
+        type: 'Online event',
         max: 50,
         current: 4,
       },
@@ -121,7 +122,7 @@ export default Vue.extend({
           'https://secure.meetupstatic.com/photos/event/4/3/e/2/highres_492797378.jpeg',
         title: 'Agile Connect Day',
         date: 'Saturday, October 10, 2020',
-        type: 'Evento online',
+        type: 'Online event',
         max: 12,
         current: 12,
       },
@@ -131,7 +132,7 @@ export default Vue.extend({
           'https://secure.meetupstatic.com/photos/event/4/3/e/2/highres_492797378.jpeg',
         title: 'Agile Connect Day',
         date: 'Saturday, October 10, 2020',
-        type: 'Evento online',
+        type: 'Online event',
         max: 40,
         current: 27,
       },
@@ -141,7 +142,7 @@ export default Vue.extend({
           'https://secure.meetupstatic.com/photos/event/4/3/e/2/highres_492797378.jpeg',
         title: 'Agile Connect Day',
         date: 'Saturday, October 10, 2020',
-        type: 'Evento online',
+        type: 'Online event',
         max: 200,
         current: 44,
       },
@@ -158,5 +159,12 @@ export default Vue.extend({
 }
 .w {
   width: 18rem;
+}
+.bdg {
+  position: absolute;
+  padding: 5px;
+  top: 0;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 </style>
