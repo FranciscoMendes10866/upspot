@@ -36,6 +36,7 @@
         </div>
       </div>
     </section>
+    <!-- Card Component -->
     <section class="py-5 bg-light">
       <div class="container">
         <h4 class="font-weight-bold py-5">
