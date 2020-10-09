@@ -1,5 +1,7 @@
 # client
 
+Nuxt + Bootstrap (v5) + TypeScript
+
 ## Build Setup
 
 ```bash
