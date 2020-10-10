@@ -6,4 +6,5 @@ require (
 	github.com/gofiber/cors v0.2.2
 	github.com/gofiber/fiber v1.14.6
 	github.com/gofiber/fiber/v2 v2.0.6
+	github.com/prisma/prisma-client-go v0.0.9 // indirect
 )
