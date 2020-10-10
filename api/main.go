@@ -1,13 +1,14 @@
 package main
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"github.com/gofiber/fiber/v2"
+	"github.com/upspot-api/router"
+)
 
 func main() {
 	app := fiber.New()
 
-	app.Get("/", func(c *fiber.Ctx) error {
-		return c.SendString("Api started")
-	})
+	router.SetupRouter(app)
 
 	app.Listen(":3333")
 }
