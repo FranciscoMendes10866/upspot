@@ -22,7 +22,6 @@ func FindEvents(c *fiber.Ctx) error {
 	}()
 	ctx := context.Background()
 	// user input
-	// User Input
 	body := new(Event)
 	c.BodyParser(body)
 	cityInput := body.City
