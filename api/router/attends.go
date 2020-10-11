@@ -11,4 +11,5 @@ func AttendsRouter(app *fiber.App) {
 	api := app.Group("/api/v1/attends")
 	// routes
 	api.Post("/:id", guards.Protected(), attends.Attend)
+	api.Delete("/:id", guards.Protected(), attends.NotAttend)
 }
