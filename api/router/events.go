@@ -11,5 +11,6 @@ func EventsRouter(app *fiber.App) {
 	api := app.Group("/api/v1/events")
 	// routes
 	api.Post("/", guards.Protected(), events.CreateEvent)
-	api.Get("/get_all", guards.Protected(), events.FindEvents)
+	api.Get("/", guards.Protected(), events.FindEvents)
+	api.Get("/:id", guards.Protected(), events.FindEvent)
 }
