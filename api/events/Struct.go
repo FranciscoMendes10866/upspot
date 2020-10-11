@@ -3,6 +3,7 @@ package events
 type Event struct {
 	ID       string `json:"id"`
 	Title    string `json:"title"`
+	City     string `json:"city"`
 	Img      string `json:"img"`
 	Date     string `json:"date"`
 	Type     string `json:"type"`

@@ -34,6 +34,7 @@ func CreateEvent(c *fiber.Ctx) error {
 	// creates a new event
 	created, err := prisma.Event.CreateOne(
 		db.Event.Title.Set(body.Title),
+		db.Event.City.Set(body.City),
 		db.Event.Img.Set(body.Img),
 		db.Event.Date.Set(body.Date),
 		db.Event.Type.Set(body.Type),

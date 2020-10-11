@@ -21,8 +21,15 @@ func FindEvents(c *fiber.Ctx) error {
 		}
 	}()
 	ctx := context.Background()
+	// user input
+	// User Input
+	body := new(Event)
+	c.BodyParser(body)
+	cityInput := body.City
 	// database query
-	query, err := prisma.Event.FindMany().Exec(ctx)
+	query, err := prisma.Event.FindMany(
+		db.Event.City.Equals(cityInput),
+	).Exec(ctx)
 	if err != nil {
 		panic(err)
 	}
