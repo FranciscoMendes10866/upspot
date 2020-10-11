@@ -15,5 +15,6 @@ func main() {
 	app.Use(compress.New())
 	router.AuthRouter(app)
 	router.EventsRouter(app)
+	router.AttendsRouter(app)
 	app.Listen(":3333")
 }
