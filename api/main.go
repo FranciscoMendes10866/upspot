@@ -13,6 +13,7 @@ func main() {
 	app.Use(cors.New())
 	app.Use(logger.New())
 	app.Use(compress.New())
-	router.SetupRouter(app)
+	router.AuthRouter(app)
+	router.EventsRouter(app)
 	app.Listen(":3333")
 }
