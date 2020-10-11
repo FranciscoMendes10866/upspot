@@ -14,4 +14,5 @@ func EventsRouter(app *fiber.App) {
 	api.Get("/", guards.Protected(), events.FindEvents)
 	api.Get("/:id", guards.Protected(), events.FindEvent)
 	api.Delete("/:id", guards.Protected(), events.DeleteEvent)
+	api.Put("/:id", guards.Protected(), events.UpdateEvent)
 }
