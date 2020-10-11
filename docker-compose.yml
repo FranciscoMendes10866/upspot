@@ -1,13 +1,15 @@
+version: "3.8"
 
-postgres:
-  image: postgres:latest
-  restart: always
-  container_name: upspotDB
-  ports:
-    - '2020:5432'
-  environment:
-    POSTGRES_USER: root
-    POSTGRES_PASSWORD: root
-    POSTGRES_DB: upspotDB
-  volumes:
-    - ./init:/docker-entrypoint-initdb.d/
+services:
+  postgres:
+    image: postgres:latest
+    restart: always
+    container_name: upspotDB
+    ports:
+      - '2020:5432'
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: upspotDB
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d/
