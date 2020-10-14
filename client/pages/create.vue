@@ -8,30 +8,56 @@
     <section class="mt-5 py-5 bg-light">
       <div class="container">
         <input
+          v-model="title"
           type="text"
           class="form-control"
           placeholder="Enter event title"
         />
-        <input type="date" class="form-control mt-3" />
-        <input type="time" class="form-control mt-3" />
         <input
+          v-model="city"
+          type="text"
+          class="form-control mt-3"
+          placeholder="Enter event city"
+        />
+        <input v-model="date" type="date" class="form-control mt-3" />
+        <input v-model="time" type="time" class="form-control mt-3" />
+        <input
+          v-model="max"
           type="number"
           class="form-control mt-3"
           placeholder="Enter the number of seats"
         />
-        <input type="text" class="form-control mt-3" placeholder="Host name" />
-        <input type="url" class="form-control mt-3" placeholder="Host link" />
-        <input type="text" class="form-control mt-3" placeholder="Event link" />
         <input
+          v-model="hostName"
+          type="text"
+          class="form-control mt-3"
+          placeholder="Host name"
+        />
+        <input
+          v-model="hostURL"
+          type="url"
+          class="form-control mt-3"
+          placeholder="Host link"
+        />
+        <input
+          v-model="link"
+          type="text"
+          class="form-control mt-3"
+          placeholder="Event link"
+        />
+        <input
+          v-model="img"
           type="url"
           class="form-control mt-3 mb-3"
           placeholder="Cover image link"
         />
-        <select class="form-select">
-          <option value="1">Online event</option>
-          <option value="2">Physical location</option>
+        <select v-model="type" class="form-select">
+          <option value="Online event">Online event</option>
+          <option value="Physical location">Physical location</option>
         </select>
-        <button class="btn btn-primary mt-5">Create event</button>
+        <button class="btn btn-primary mt-5" @click="Create">
+          Create event
+        </button>
       </div>
     </section>
     <!-- Footer -->
@@ -50,6 +76,47 @@ export default Vue.extend({
   components: {
     Navbar,
     Footer,
+  },
+  data: () => ({
+    title: '',
+    img: '',
+    date: '',
+    time: '',
+    city: '',
+    type: '',
+    max: null,
+    hostName: '',
+    hostURL: '',
+    link: '',
+  }),
+  methods: {
+    async Create() {
+      const componentState = {
+        title: this.title,
+        img: this.img,
+        date: this.date,
+        time: this.time,
+        city: this.city,
+        type: this.type,
+        max: Number(this.max),
+        hostName: this.hostName,
+        hostURL: this.hostURL,
+        link: this.link,
+      }
+      const create = await this.$axios.post(
+        'http://localhost:3333/api/v1/events',
+        componentState,
+        {
+          headers: {
+            Authorization: `Bearer ${this.$store.state.Token}`,
+          },
+        }
+      )
+      if (!create) {
+        // eslint-disable-next-line no-console
+        console.log('Create event error.')
+      }
+    },
   },
 })
 </script>
