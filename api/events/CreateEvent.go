@@ -31,6 +31,7 @@ func CreateEvent(c *fiber.Ctx) error {
 	tokenID := claims["id"].(string)
 	// adds the user_id to the object
 	body.UserID = tokenID
+	body.AttendsNumber = 0
 	// creates a new event
 	created, err := prisma.Event.CreateOne(
 		db.Event.Title.Set(body.Title),
@@ -39,6 +40,7 @@ func CreateEvent(c *fiber.Ctx) error {
 		db.Event.Date.Set(body.Date),
 		db.Event.Type.Set(body.Type),
 		db.Event.Max.Set(body.Max),
+		db.Event.AttendsNumber.Set(body.AttendsNumber),
 		db.Event.HostName.Set(body.HostName),
 		db.Event.HostURL.Set(body.HostURL),
 		db.Event.Link.Set(body.Link),
