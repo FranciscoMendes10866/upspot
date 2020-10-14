@@ -46,13 +46,26 @@
             <div class="card border-0 shadow w px-3 py-3">
               <span class="text-muted mb-2">{{ event.type }}</span>
               <span>10:00 AM to 7:00 PM</span>
-              <button v-if="attend === null" class="btn btn-success mt-3">
+              <button
+                v-if="attend === null"
+                v-show="hasToken"
+                class="btn btn-success mt-3"
+                @click.prevent="Validate"
+              >
                 Validate
               </button>
-              <button v-if="attend === false" class="btn btn-primary mt-3">
+              <button
+                v-if="attend === false"
+                class="btn btn-primary mt-3"
+                @click.prevent="Attend"
+              >
                 Attend
               </button>
-              <button v-if="attend === true" class="btn btn-danger mt-3">
+              <button
+                v-if="attend === true"
+                class="btn btn-danger mt-3"
+                @click.prevent="NotAttend"
+              >
                 Not Attend
               </button>
               <a
@@ -73,11 +86,14 @@
     <section>
       <Footer class="border-top" />
     </section>
+    {{ id }}
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import { mapGetters } from 'vuex'
+
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
 
@@ -87,21 +103,63 @@ export default Vue.extend({
     Footer,
   },
   data: () => ({
-    event: {
-      id: 1,
-      img:
-        'https://secure.meetupstatic.com/photos/event/4/3/e/2/highres_492797378.jpeg',
-      title: 'Agile Connect Day',
-      date: 'Saturday, October 10, 2020',
-      type: 'Online event',
-      max: 35,
-      current: 12,
-      hostName: 'Instituto Superior Miguel Torga',
-      hostURL: 'https://www.ismt.pt',
-      link: 'https://discord.com/',
-    },
+    event: {},
     attend: null,
   }),
+  computed: {
+    ...mapGetters({
+      hasToken: 'hasToken',
+    }),
+  },
+  created() {
+    this.$axios
+      .get(`http://localhost:3333/api/v1/events/${this.$route.params.id}`)
+      .then((res: any) => {
+        this.event = res.data
+      })
+  },
+  methods: {
+    async Validate() {
+      await this.$axios.get(`http://localhost:3333/api/v1/attends/${this.$route.params.id}`, {
+          headers: {
+            Authorization: `Bearer ${this.$store.state.Token}`,
+          },
+        })
+        .then((res: any) => {
+          const response = res.data.error === 'Empty array.'
+          if (response === true) {
+            this.attend = false
+          } else {
+            this.attend = true
+          }
+        })
+    },
+    async NotAttend() {
+      await this.$axios
+        .delete(
+          `http://localhost:3333/api/v1/attends/${this.$route.params.id}`,
+          {
+            headers: {
+              Authorization: `Bearer ${this.$store.state.Token}`,
+            },
+          }
+        )
+        .then(() => {
+          this.attend = false
+        })
+    },
+    async Attend() {
+      await this.$axios
+        .post(`http://localhost:3333/api/v1/attends/${this.$route.params.id}`, {
+          headers: {
+            Authorization: `Bearer ${this.$store.state.Token}`,
+          },
+        })
+        .then(() => {
+          this.attend = true
+        })
+    },
+  },
 })
 </script>
 
