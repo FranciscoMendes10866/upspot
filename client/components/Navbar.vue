@@ -6,19 +6,41 @@
           Lamy
         </nuxt-link>
         <form class="d-flex">
-          <nuxt-link class="btn btn-sm bg-transparent" to="/login">
+          <nuxt-link
+            v-if="!hasToken"
+            class="btn btn-sm bg-transparent"
+            to="/login"
+          >
             Sign In
           </nuxt-link>
-          <nuxt-link class="btn btn-sm bg-transparent" to="/register">
+          <nuxt-link
+            v-if="!hasToken"
+            class="btn btn-sm bg-transparent"
+            to="/register"
+          >
             Sign Up
           </nuxt-link>
-          <nuxt-link class="btn btn-sm bg-transparent" to="/create">
+          <nuxt-link
+            v-if="hasToken"
+            class="btn btn-sm bg-transparent"
+            to="/create"
+          >
             Create
           </nuxt-link>
-          <nuxt-link class="btn btn-sm bg-transparent" to="/panel">
+          <nuxt-link
+            v-if="hasToken"
+            class="btn btn-sm bg-transparent"
+            to="/panel"
+          >
             Panel
           </nuxt-link>
-          <button class="btn btn-sm btn-primary">Sign Out</button>
+          <button
+            v-if="hasToken"
+            class="btn btn-sm btn-primary"
+            @click="LogOut"
+          >
+            Sign Out
+          </button>
         </form>
       </div>
     </nav>
@@ -27,5 +49,18 @@
 
 <script lang="ts">
 import Vue from 'vue'
-export default Vue.extend({})
+import { mapActions, mapGetters } from 'vuex'
+
+export default Vue.extend({
+  computed: {
+    ...mapGetters({
+      hasToken: 'hasToken',
+    }),
+  },
+  methods: {
+    ...mapActions({
+      LogOut: 'LogOut',
+    }),
+  },
+})
 </script>

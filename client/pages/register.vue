@@ -6,16 +6,22 @@
           <div class="card border-0 px-4 py-4 shadow">
             <h3 class="text-center text-muted">Create account</h3>
             <input
+              v-model="localEmail"
               class="mt-3 form-control"
               type="email"
               placeholder="Enter your email"
+              @input="handleRegisterEmail"
             />
             <input
+              v-model="localPassword"
               class="mt-3 form-control"
               type="text"
               placeholder="Enter your password"
+              @input="handleRegisterPassword"
             />
-            <button class="btn btn-bg-blue mt-4">Sign Up</button>
+            <button class="btn btn-bg-blue mt-4" @click="SignUp">
+              Sign Up
+            </button>
             <hr class="dropdown-divider mt-3" />
             <nuxt-link to="/login" class="btn btn-bg-blue-darken mt-2"
               >Sign In</nuxt-link
@@ -30,8 +36,29 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { mapMutations, mapActions } from 'vuex'
 
-export default Vue.extend({})
+export default Vue.extend({
+  data: () => ({
+    localEmail: '',
+    localPassword: '',
+  }),
+  methods: {
+    ...mapMutations({
+      setRegisterEmail: 'SET_REGISTER_EMAIL',
+      setRegisterPassword: 'SET_REGISTER_PASSWORD',
+    }),
+    ...mapActions({
+      SignUp: 'SignUp',
+    }),
+    handleRegisterEmail() {
+      this.setRegisterEmail(this.localEmail)
+    },
+    handleRegisterPassword() {
+      this.setRegisterPassword(this.localPassword)
+    },
+  },
+})
 </script>
 
 <style scoped>
